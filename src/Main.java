@@ -25,10 +25,10 @@ public class Main {
         System.out.println();
         System.out.println("Задание №3");
         int totalPopulation = 12_000_000;
-        int birthRate = totalPopulation / 1000 * 17;
-        int mortality = totalPopulation / 1000 * 8;
-        for (int y = 0; y <= 10; y++) {
-            totalPopulation = totalPopulation + birthRate - mortality;
+        float birthRate = (float) 17 / 1000;
+        float mortality = (float) 8 / 1000;
+        for (int y = 1; y <= 10; y++) {
+            totalPopulation = totalPopulation + Math.round(totalPopulation * birthRate) - Math.round(totalPopulation * mortality);
             System.out.println("Год " + y + ", численность населения составляет " + totalPopulation);
         }
     }
